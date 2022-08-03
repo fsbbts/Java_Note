@@ -2,7 +2,33 @@
 
 
 
-## Java快速入门--hello world
+## Java 基础知识
+
+- JDK = JRE + Java开发工具（如编译工具javac.exe）
+
+- JRE = JVM + **核心类库**
+
+- Java核心类库：Java自带很多实用的包，这些包中定义了很多类库
+
+- 环境变量配置作用：为dos在任意目录，都可以直接使用javac和java命令
+
+- 环境变量配置方法：
+
+  1. 此电脑->属性->高级系统设置->环境变量->设置JAVA_HOME = 指向JDK安装的主目录`D:\JDK8\jdk8`
+
+     /*这里变量是用户变量 如naruto的用户变量：意思是对当前用户生效的环境变量，而系统变量是对所有用户都生效的环境变量*/
+
+  2. 也是在环境变量中找到 path，编辑path变量，添加`%JAVA_HOME%\bin`
+
+     /*这里的%JAVA_HOME%相当于D：\JDK8\jdk8这个路径，用JAVA_HOME是为了后面如果要修改，可以直接修改JAVA_HOME这个变量的路径指向而不是直接修改路径*/
+
+- Java代码编写步骤
+
+  1. 编写代码
+  2. javac 编译 ，得到对应的`.class`字节码文件
+  3. java 运行 ，本质是将 `.class`文件加载到 JVM 中运行
+
+ ## Java快速入门--hello world
 
 + hello world 的编译 在cmd中用javac hello.java来编译
 
@@ -12,7 +38,7 @@
 
 - cmd使用技巧，上键可以直接调用上一个指令，Tab是快速补全
 
-
+  
 
 ## Java执行流程
 
@@ -219,3 +245,42 @@
   2. git add *
   3. git commit -m "文字说明"
   4. git push -u origin main
+
+
+
+## Java 代码规范
+
+1. 类，方法用javadoc来写
+2. 非javadoc注释，用单行/多行注释，用以给代码维护者看
+3. 整体后移：选中之后按Tab
+4. 整体前移：选中之后按shift+Tab
+5. 运算符和 = 两边多加一个空格
+6. 源文件用 utf-8进行编码，这里是因为在DOS系统中有中文字符不得已用GBK，正常都是用utf-8
+7. 编码使用：行尾风格/次行风格
+
+
+
+## Java DOS命令(不是重点)
+
+**相对路径与绝对路径**
+
+相对路径：从当前目录开始定位，形成一个路径
+
+`..\..\abc2\test200\hello.txt`
+
+绝对路径：从顶级目录d，开始定位，形成一个路径
+
+`d:\abc2\test200\hello.txt`
+
+1. 查看当前目录：`dir`   `dir d:\abc2\test200`
+2. 切换根目录 `cd \D c:`
+3. 切换到当前目录其他目录下`cd d:\abc2\test200`   `cd ..\..\abc2\test200`
+4. 切换到上一级`cd ..`
+5. 切换到根目录`cd \`
+6. 查看当前目录的所有子目录 `tree d:` `tree d:\abc2`
+7. 清屏`cls`
+8. 退出DOS `exit`
+
+
+
+## Java
