@@ -104,7 +104,7 @@
 
 
 
-## Java转义字符
+## 转义字符
 
 - ctrl+/是多行注释的快捷键
 
@@ -172,7 +172,7 @@
 
      
 
-## Java 易犯错误
+##  易犯错误
 
 - 找不到文件
 
@@ -188,7 +188,7 @@
 
 
 
-## Java 注释
+##  注释
 
 - 单行注释
 
@@ -212,7 +212,7 @@
 
   ```java
   /**
-   *@author szd 
+   *@author fsbbts 
    *@version  1.0
   */
   文档注释的固定格式：多行注释的形式，第一行多加一个*，此后注释里每写一行都要加* 然后加@author之类的javadoc标签
@@ -232,7 +232,7 @@
 
   - 生成实例：打开目标文件夹里的index.html即可看到文档注释
 
-## Java 补充 Typora上传至github
+##  补充 Typora上传至github
 
 - 在github上创建repository，复制地址
 - 打开md文件所在处，右键点击git Bash here（若是在desktop打开的 用cd指令进入md文件所在处）
@@ -248,7 +248,7 @@
 
 
 
-## Java 代码规范
+##  代码规范
 
 1. 类，方法用javadoc来写
 2. 非javadoc注释，用单行/多行注释，用以给代码维护者看
@@ -260,7 +260,7 @@
 
 
 
-## Java DOS命令(不是重点)
+##  DOS命令(不是重点)
 
 **相对路径与绝对路径**
 
@@ -283,4 +283,76 @@
 
 
 
-## Java
+##  变量
+
+**使用方法：**
+
+```java
+//声明变量
+int a;
+//变量赋值
+a = 60;
+//输出变量
+System.out.println(a);
+
+
+//实例（包括各类变量）
+public class var02{
+    public static void main(String[] args){
+        int age = 3000;
+        double height = 165.0;
+        char gender = 'M';
+        String name = "wendy"; //注意String 中的大写s
+        System.out.println(name);
+        System.out.println(gender);
+        System.out.println(age);
+        System.out.println(height);
+//这里不好加中文，因为没有GBK格式 导致编译时会报错
+    }
+}
+```
+
+
+
+## “+”的使用
+
+```java
+//两边都是数字，做算术加法运算
+System.out.println(98 + 19); //输出117
+
+//两边有一边是字符串， 做拼接运算
+System.out.println("98" + 19); //输出9819 
+
+```
+
+
+
+## 数据类型
+
+- 基本数据类型：数值型， 字符型， 布尔型
+
+  - 数值型：
+
+    - 整数类型（byte[1], short[2], int[4], long[8]）
+
+    - 浮点类型(float[4], double[8])
+
+  - 字符型：
+
+    - char[2] (英文占1B，中文占2B)
+
+  - 布尔型：
+
+    - boolean[1] , 只有true，false
+
+- 引用数据类型：类（class），接口（interface），数组[ ]
+
+
+
+## 整数使用
+
+- byte:   `-128~127`
+- short: $-2^{15}$~$2^{15} - 1$    -3万~+3万 
+- int: $-2^{31}$ ~  $2^{31} - 1$     大概是$10^9$这个量级
+- long: $-2^{63}$ ~ $2^{63} - 1$   大概是$10^{18}$这个量级
+
